@@ -19,7 +19,7 @@ class MasterSeeder extends Seeder
         ]);
 
         DB::table('experiences')->insert([
-            'name' => 'Experience 1',
+            'name' => 'Food Industry',
         ]);
 
         DB::table('experience_user')->insert([
@@ -28,24 +28,32 @@ class MasterSeeder extends Seeder
         ]);
 
         DB::table('jobs')->insert([
-            'name' => 'job name',
-            'desc' => 'job desc',
+            'name' => 'McDonald\'s Sales Associate',
+            'desc' => 'This job pays 9.00$ an hour. You will recieve orders from 
+            customers and fulfill transactions. Contact the manager to schedule an 
+            interview.',
             'experience_id' => 1,
             'employer_id' => 1,
-            'location' => '350 E. Glen Creek St. Natick, MA 01760'
+            'location' => '4006 Lindell Blvd, Saint Louis, MO 63108'
         ]);
 
         DB::table('jobs')->insert([
-            'name' => 'job name2',
-            'desc' => 'job desc2',
+            'name' => 'Steak \'n Shake Cook',
+            'desc' => 'This job pay 11.00$ an hour. You will prepare and package the 
+            customers\' orders. Contact the manager to schedule an interview.',
             'experience_id' => 1,
-            'employer_id' => 1,
-            'location' => '350 E. Glen Creek St. Natick, MA 01760'
+            'employer_id' => 2,
+            'location' => '1253 Hampton Ave, Saint Louis, MO 63139'
         ]);
 
         DB::table('employers')->insert([
-            'name' => 'Employer 1',
-            'email' => 'emp@test.c'
+            'name' => 'McDonald\'s',
+            'email' => 'joboppurtunities@mcdonaldslindell.com'
+        ]);
+
+        DB::table('employers')->insert([
+            'name' => 'Steak \'n Shake',
+            'email' => 'joboppurtunities@mcdonaldslindell.com'
         ]);
 
         DB::table('job_user')->insert([
@@ -53,10 +61,6 @@ class MasterSeeder extends Seeder
             'user_id' => 1
         ]);
 
-        DB::table('job_user')->insert([
-            'job_id' => 2,
-            'user_id' => 1
-        ]);
 
         //DB::table('experience_user')->insert([
             //'experience_id' => 1,
