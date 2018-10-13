@@ -24,9 +24,9 @@ class translate extends Controller
     public function index()
     {
       $translator = new \Dedicated\GoogleTranslate\Translator;
-      $view = view('iansection')->render();
-      $result = $translator->setSourceLang('fr')
-                           ->setTargetLang('en')
+      $view = view('jobs')->render();
+      $result = $translator->setSourceLang('en')
+                           ->setTargetLang('fr')
                            ->translate($view);
         return $result;
     }

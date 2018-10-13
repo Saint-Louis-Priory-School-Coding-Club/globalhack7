@@ -34,7 +34,7 @@ class HomeController extends Controller
 
     public function lang(Request $request) {
         $translator = new \Dedicated\GoogleTranslate\Translator;
-        $view = view('postregistration')->render();
+        $view = view('jobs')->render();
         $result = $translator->setSourceLang('en')
                              ->setTargetLang($request->code)
                              ->translate($view);
