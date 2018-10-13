@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('iansection');
-});
+Route::get('/', 'translate@index');
 
 Auth::routes();
 

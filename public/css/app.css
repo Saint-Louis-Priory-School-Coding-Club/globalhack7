@@ -10472,6 +10472,7 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+<<<<<<< HEAD
 p {
   background-color: red;
 }
@@ -10479,5 +10480,25 @@ p {
 .card_margin {
   margin-left: 25px;
   margin-right: 25px;
+=======
+.card_margin {
+  margin: 25px;
+}
+
+.job-select {
+  margin: auto;
+}
+
+.jobAddress {
+  margin: 15px;
+}
+
+.contact-form {
+  resize: none;
+}
+
+.job-select {
+  margin: auto;
+>>>>>>> ea4a45a3a4a7e33bb02b569498bc75db09626008
 }
 
