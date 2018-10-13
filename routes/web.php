@@ -27,6 +27,6 @@ Route::post('/jobs', 'JobsController@email');
 
 Route::get('/jobs/{job}', 'JobsController@show');
 
-Route::get('/chat', 'JobsController@chat');
+Route::get('/chat/{id}', 'JobsController@chat');
 
-Route::post('/lang', 'HomeController@lang');
+Route::post('/lang/{job}', 'HomeController@lang');

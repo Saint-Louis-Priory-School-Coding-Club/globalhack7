@@ -6,6 +6,8 @@ app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
+//io.set('origins', 'http://gh7.local');
+
 io.on('connection', function(socket){
     console.log('a user connected');
 });
@@ -25,7 +27,7 @@ io.on('connection', function(socket){
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
-      io.emit('chat message', msg);
+      socket.broadcast.emit('chat message', msg);
     });
 });
 

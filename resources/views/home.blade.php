@@ -17,7 +17,7 @@
                             </div>
                         </a>
                     @endforeach
-                @else
+                @endif
                     @foreach(Auth::user()->experiences as $experience)
                         <h4>Jobs for {{$experience->name}}</h4>
                         @foreach($experience->jobs as $job)
@@ -32,7 +32,6 @@
                             </a>
                         @endforeach
                     @endforeach
-                @endif
             </div>
         </div>
     </div>

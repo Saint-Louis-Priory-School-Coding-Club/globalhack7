@@ -40,11 +40,13 @@ class JobsController extends Controller
 
         Mail::to($employer->email)->send(new ContactEmployer(Auth::user(), $request->body));
 
+        Auth::user()->jobs()->attach($request->jobid);
+
 
         return back();
     }
 
-    public function chat() {
-        return view('chat');
+    public function chat($id) {
+        return view('chat', compact('id'));
     }
 }

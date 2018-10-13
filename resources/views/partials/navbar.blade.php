@@ -25,11 +25,8 @@
                             <li><a href="#" class="dropdown-item" id="ru">Russian</a></li>
                             <li><a href="#" class="dropdown-item">French</a></li>
                             <li><a href="#" class="dropdown-item">Bosnian</a></li>
+                            <li><a href="#" id="en" class="dropdown-item">English</a></li>
                         </ul>
-                        <form action="/lang" method="post" id="lang-form" style="display: none">
-                            @csrf
-                            <input type="text" name="code" id="lang-code">
-                        </form>
                     </li>
                 @guest
                     <li class="nav-item">

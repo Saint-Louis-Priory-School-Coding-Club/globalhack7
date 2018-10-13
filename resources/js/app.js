@@ -18,3 +18,28 @@ $('#ru').click(function () {
     $('#lang-code').val('ru');
     $('#lang-form').submit();
 });
+
+$('#en').click(function () {
+    window.location.href = "http://gh7.local/jobs/1";
+});
+
+if ($('#chat').length) {
+    var io = require('socket.io-client');
+    const socket = io('http://localhost:3000');
+
+    $('#chat-form').submit(function() {
+        if ($('#m').val()) {
+            socket.emit('chat message', $('#m').val());
+            $('#messages').append($('<br>'));
+            $('#messages').append($('<div style="float:right" class="text_message_to bg-primary">').text($('#m').val()));
+            $('#messages').append($('<br>'));
+            $('#m').val('');
+        }
+        return false;
+    });
+
+    socket.on('chat message', function(msg) {
+        $('#messages').append($('<div class="text_message_from">').text(msg));
+        $('#messages').append($('<br>'));
+    });
+}

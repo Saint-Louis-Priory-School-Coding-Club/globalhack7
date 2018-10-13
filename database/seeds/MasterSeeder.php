@@ -22,10 +22,10 @@ class MasterSeeder extends Seeder
             'name' => 'Experience 1',
         ]);
 
-        //DB::table('experience_user')->insert([
-            //'experience_id' => 1,
-            //'user_id' => 1
-        //]);
+        DB::table('experience_user')->insert([
+            'experience_id' => 1,
+            'user_id' => 1
+        ]);
 
         DB::table('jobs')->insert([
             'name' => 'job name',

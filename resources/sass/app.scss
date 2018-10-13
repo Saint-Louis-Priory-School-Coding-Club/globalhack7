@@ -8,12 +8,6 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-html {
-  background-color: #EEECEE;
-}
-
-
-
 .navbar-laravel {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -89,7 +83,7 @@ html {
     margin-right: 0;
     float: right;
     border-color: #D3D3D3;
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
     font-weight: 400;
     display: inline-block;
     -webkit-user-select: none;
