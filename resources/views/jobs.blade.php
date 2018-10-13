@@ -32,11 +32,11 @@
             <hr>
             <div class="jobAddress">
                 <h3>Address</h3>
-                <p>1831 Manchester Rd. 63017, Manchester MO, USA</p>
-                $var = "https://www.google.com/maps/embed/v1/place?q=" + address + "&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k"
+                <p>{{$job->location}}</p>
+                {{str_replace(' ', '+', $job->location)}}
                 <div class="googleMaps">
                         <iframe width="100%" height="450" frameborder="0" style="border:0"
-                        src=$var></iframe>
+                src="https://www.google.com/maps/embed/v1/place?q={{$job->location}}&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k"></iframe>
                 </div>
             </div>
         </div>
