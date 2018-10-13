@@ -4,7 +4,7 @@
 <div class="card card_margin">
   <div class="card-body">
     <h4 class="card-title">Tell us about yourself!</h4>
-    
+
     <p class="card-text">
       <form id="UserInfo" action="#" method="post">
         <div class="form-group">
@@ -21,11 +21,12 @@
           <label for="example-date-input" >Birthday: *</label>
           <br>
           <div class="form-group">
-            <input class="form-control" type="date" id="bday">
+            <input class="form-control" type="date" id="bday" required>
           </div>
         </div>
 
         <div class="form-group">
+
           <label for="exampleInputCountry1">Country of Birth: *</label>
           <input type="text" class="form-control" id="exampleInputCountry1 CoB" placeholder="Country of Birth">
         </div>
