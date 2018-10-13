@@ -47412,7 +47412,7 @@ if (false) {
 /* 43 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n}\n^\n      Invalid CSS after \"}\": expected 1 selector or at-rule, was \"<<<<<<< HEAD\"\n      in /Users/alexwasinger/Sites/gh7/resources/sass/app.scss (line 14, column 2)\n    at runLoaders (/Users/alexwasinger/Sites/gh7/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/alexwasinger/Sites/gh7/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/alexwasinger/Sites/gh7/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/alexwasinger/Sites/gh7/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/alexwasinger/Sites/gh7/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/Users/alexwasinger/Sites/gh7/node_modules/neo-async/async.js:7974:18)\n    at options.error (/Users/alexwasinger/Sites/gh7/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);

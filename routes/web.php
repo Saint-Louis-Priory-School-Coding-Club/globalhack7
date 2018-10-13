@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('textintegration');
+    return view('iansection');
 });
 
 Auth::routes();
