@@ -51,5 +51,5 @@
   }
   </script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k&callback=myMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASYmZ4iBjropstijIuXGZXuDVA7AbSEhI&callback=myMap"></script>
             @endsection
