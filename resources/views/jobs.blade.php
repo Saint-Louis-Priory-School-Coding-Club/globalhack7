@@ -33,27 +33,14 @@
             <hr>
             <div class="jobAddress">
                 <h3>Address</h3>
-                <p>1831 Manchester Rd. 63017, Manchester MO, USA</p>
-
-
-                <div id="map" style="width:100%;height:500px"></div>
-
-                <script>
-                function myMap() {
-                  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
-                  var mapCanvas = document.getElementById("map");
-                  var mapOptions = {center: myCenter, zoom: 5};
-                  var map = new google.maps.Map(mapCanvas, mapOptions);
-                  var marker = new google.maps.Marker({position:myCenter});
-                  marker.setMap(map);
-                }
-
-                
-                </script>
-
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k&callback=myMap"></script>
-
-
-            </div>
+                <p>{{$job->location}}</p>
+                {{str_replace(' ', '+', $job->location)}}
+                <div class="googleMaps">
+                        <iframe width="100%" height="450" frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?q={{$job->location}}&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k"></iframe>
                 </div>
-                      @endsection
+            </div>
+        </div>
+
+    @endsection
+//https://www.google.com/maps/embed/v1/place?q=540+Mason+Road,+MO,+United+States&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k
