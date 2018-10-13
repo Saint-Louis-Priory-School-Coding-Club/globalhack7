@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div >
+    <div>
         <div class="dropdown">
-            <div class="text-center">
+            <div class="text-center" style="margin-bottom: 25px">
                 <button class="text-center btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Job
                 </button>
