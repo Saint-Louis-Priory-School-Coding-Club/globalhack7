@@ -3,24 +3,46 @@
 
 <div class="card card_margin">
   <div class="card-body">
-    <h5 class="card-title">Tell us about yourself!</h5>
+    <h4 class="card-title">Tell us about yourself!</h4>
+    
     <p class="card-text">
       <form id="UserInfo" action="#" method="post">
-        Sex:<br>
-        <input type="radio" name="gender" id="male"> Male<br>
-        <input type="radio" name="gender" id="female"> Female<br>
-        <input type="radio" name="gender" id="other"> Other <br>
-            Birthday: <br>
-          <input type="date" id="bday"> <br>
-Country of Birth:<br>
-<input type="text" id="CoB" placeholder="Country of Birth"><br>
-Primary Language:<br>
-<input type="text" id="PriLang" placeholder="Primary Language"><br>
-Secondary Language:<br>
-<input type="text" id="SecLang" placeholder="Secondary Language"><br>
-<br>
-  <input class="btn-primary" type="submit" value="Submit">
-</form>
+        <div class="form-group">
+          <label for="sel1">Sex:</label>
+          <select class="form-control" id="sel1">
+            <option value="select">Select One</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div >
+          <label for="example-date-input" >Birthday:</label>
+          <br>
+          <div class="form-group">
+            <input class="form-control" type="date" id="bday">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputCountry1">Country of Birth:</label>
+          <input type="text" class="form-control" id="exampleInputCountry1 CoB" placeholder="Country of Birth">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputLanguage1">Primary Language:</label>
+          <input type="text" class="form-control" id="exampleInputLanguage1 PriLang" placeholder="Primary Language">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputLanguage2">Secondary Language:</label>
+          <input type="text" class="form-control" id="exampleInputLanguage2 SecLang" placeholder="Secondary Language">
+        </div>
+
+        <br>
+        <input class="btn-primary" type="submit" value="Submit">
+      </form>
     </p>
   </div>
 </div>
