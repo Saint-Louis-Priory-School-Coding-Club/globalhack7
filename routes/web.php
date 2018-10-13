@@ -16,6 +16,9 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('guest');
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/jobs', 'JobsController@show');
+Route::get('/chat', 'JobsController@chat');

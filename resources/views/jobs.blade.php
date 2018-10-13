@@ -4,7 +4,7 @@
     <div >
         <div class="dropdown">
             <div class="text-center">
-                <button class="text-center btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="job-select btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Job
                 </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
