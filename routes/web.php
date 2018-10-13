@@ -13,14 +13,20 @@
 
 
 Route::get('/', function () {
-    return view('postregistration');
+    return view('welcome');
 })->middleware('guest');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/jobs', 'JobsController@show');
+Route::post('/home', 'HomeController@finishReg');
+
+Route::get('/jobs', 'JobsController@index');
+Route::post('/jobs', 'JobsController@email');
+
+Route::get('/jobs/{job}', 'JobsController@show');
+
 Route::get('/chat', 'JobsController@chat');
 
 Route::post('/lang', 'HomeController@lang');

@@ -3,24 +3,17 @@
 @section('content')
     <div>
         <div class="dropdown">
-            <div class="text-center margin-bottom-25px">
-                <button class="text-center btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select Job
-                </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Cook for McDonald's @ Manchester</a>
-                <a class="dropdown-item" href="#">Sales Attendent for Quik Trip @ Chesterfield</a>
-            </div>
-            </div>
             <div class="card_margin card" class="McdonaldsManchesterCook">
                 <div class="jobDescription card-body">
-                    <h2 class="card-title">Cook needed for the McDonald's on Manchester Rd.</h2></li>
-                <p class="card-description">The cook will be paid $9.00 an hour. Email the employer for more information and to get an interview.</p></li>
+                    <h2 class="card-title">{{$job->name}}</h2>
+                <p class="card-description">{{$job->desc}}</p>
             <hr>
 
             <div class="emailEmployer" style="margin:auto">
-                <h2>Contact Company</h2>
-                <form action="">
+                <h2>Contact {{$job->employer->name}}</h2>
+                <form action="/jobs" method="post">
+                    @csrf
+                    <input type="hidden" name="employerid" value="{{$job->employer->id}}">
                     <div class="form-group">
                         <textarea class="form-control contact-form" name="body" cols="30" rows="5"></textarea>
                     </div>
@@ -32,22 +25,22 @@
             <hr>
             <div class="jobAddress">
                 <h3>Address</h3>
-                <p>1831 Manchester Rd. 63017, Manchester MO, USA</p>
+                <p>{{$job->location}}</p>
                 <div class="googleMaps">
                     <div id="googleMap" class="google-map"></div>
                 </div>
             </div>
-        </div>
+                </div>
 
-    <script>
-    function myMap() {
-        var mapProp= {
-            center:new google.maps.LatLng(40,-73),
-            zoom:5,
-        };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    </script>
+                <script>
+                    function myMap() {
+                        var mapProp= {
+                            center:new google.maps.LatLng(40,-73),
+                            zoom:5,
+                        };
+                        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                    }
+                </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASYmZ4iBjropstijIuXGZXuDVA7AbSEhI&callback=myMap"></script>
-@endsection
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASYmZ4iBjropstijIuXGZXuDVA7AbSEhI&callback=myMap"></script>
+            @endsection

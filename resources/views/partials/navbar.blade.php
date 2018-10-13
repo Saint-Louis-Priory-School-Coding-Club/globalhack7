@@ -16,22 +16,22 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
-                @guest
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Languges
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" id="ru">Russian</a></li>
-                                <li><a href="#">French</a></li>
-                                <li><a href="#">Bosnian</a></li>
-                            </ul>
-                            <form action="/lang" method="post" id="lang-form" style="display: none">
-                                @csrf
-                                <input type="text" name="code" id="lang-code">
-                            </form>
-                        </div>
+                    <li class="dropdown">
+
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            Languages <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item" id="ru">Russian</a></li>
+                            <li><a href="#" class="dropdown-item">French</a></li>
+                            <li><a href="#" class="dropdown-item">Bosnian</a></li>
+                        </ul>
+                        <form action="/lang" method="post" id="lang-form" style="display: none">
+                            @csrf
+                            <input type="text" name="code" id="lang-code">
+                        </form>
                     </li>
+                @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>

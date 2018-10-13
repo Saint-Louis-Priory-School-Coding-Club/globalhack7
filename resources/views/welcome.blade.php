@@ -85,7 +85,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Hamilton
+                    {{config('app.name')}}
                 </div>
                 <h3>"Immigrants: We Get The Job Done"</h3><!--Change the motto-->
             </div>

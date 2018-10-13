@@ -10569,6 +10569,7 @@ html {
 .home-card {
   -webkit-transition: .5s;
   transition: .5s;
+  margin-bottom: 15px;
 }
 
 .home-card:hover {
