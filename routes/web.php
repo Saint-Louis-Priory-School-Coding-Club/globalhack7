@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('postregistration');
+    return view('jobs');
 })->middleware('guest');
 
 

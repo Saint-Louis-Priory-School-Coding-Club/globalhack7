@@ -3,7 +3,7 @@
 @section('content')
     <div>
         <div class="dropdown">
-            <div class="text-center" style="margin-bottom: 25px">
+            <div class="text-center margin-bottom-25px">
                 <button class="text-center btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Job
                 </button>
@@ -35,21 +35,20 @@
                 <h3>Address</h3>
                 <p>1831 Manchester Rd. 63017, Manchester MO, USA</p>
                 <div class="googleMaps">
-
+                    <div id="googleMap" class="google-map"></div>
                 </div>
             </div>
-                </div>
-                <div id="googleMap" style="width:100%;height:400px;"></div>
+        </div>
 
   <script>
   function myMap() {
-  var mapProp= {
-      center:new google.maps.LatLng(51.508742,-0.120850),
+    var mapProp= {
+      center:new google.maps.LatLng(40,-73),
       zoom:5,
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   }
   </script>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASYmZ4iBjropstijIuXGZXuDVA7AbSEhI&callback=myMap"></script>
-            @endsection
+@endsection
