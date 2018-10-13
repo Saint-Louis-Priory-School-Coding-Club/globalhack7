@@ -13712,7 +13712,8 @@ __webpack_require__(12);
  */
 
 $('#ru').click(function () {
-  console.log('good');
+  $('#lang-code').val('ru');
+  $('#lang-form').submit();
 });
 
 /***/ }),

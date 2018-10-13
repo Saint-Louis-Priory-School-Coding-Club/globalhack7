@@ -15,5 +15,6 @@ require('./bootstrap');
  */
 
 $('#ru').click(function () {
-    console.log('good');
+    $('#lang-code').val('ru');
+    $('#lang-form').submit();
 });

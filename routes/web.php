@@ -23,4 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/jobs', 'JobsController@show');
 Route::get('/chat', 'JobsController@chat');
 
-Route::get('/lang/{code}', 'HomeController@lang');
+Route::post('/lang', 'HomeController@lang');

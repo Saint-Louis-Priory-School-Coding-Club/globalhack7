@@ -27,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function experiences() {
+        return $this->belongsToMany(Experience::class);
+    }
+
+    public function jobs() {
+        return $this->belongsToMany(Job::class);
+    }
 }
