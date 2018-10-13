@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <h4 class="home-margin-bottom">Jobs You Have Applied for</h4>
+            <h4 class="home-margin-bottom">Jobs You Have Applied For:</h4>
             <div class="col-md-8">
                 @foreach(Auth::user()->jobs as $job)
                     <a href="#" class="home-card-link">

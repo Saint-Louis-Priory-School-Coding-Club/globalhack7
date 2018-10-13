@@ -87,7 +87,7 @@
                 <div class="title m-b-md">
                     Hamilton
                 </div>
-                <h3>"Immigrants: We Get The Job Done"</h3>
+                <h3>"Immigrants: We Get The Job Done"</h3><!--Change the motto-->
             </div>
         </div>
     </body>
