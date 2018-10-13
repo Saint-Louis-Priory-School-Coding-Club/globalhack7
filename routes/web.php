@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('jobs');
+    return view('textintegration');
 });
 
 Auth::routes();
