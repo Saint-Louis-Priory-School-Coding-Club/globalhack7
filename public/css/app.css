@@ -10583,3 +10583,8 @@ a.text-dark:focus {
   height: 400px;
 }
 
+.chat-form {
+  width: 100%;
+  display: inline;
+}
+

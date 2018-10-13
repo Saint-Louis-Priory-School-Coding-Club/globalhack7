@@ -13,14 +13,12 @@
                 {{--<p class="text_message_to">Hello Alex</p>--}}
 
 
-                <div class="input-group mb-3">
-                    <form action="" id="chat-form">
-                        <div class="form-group">
-                            <input id="m" type="text" class="form-control" placeholder="Type a Message Here" >
-                            <button type="submit" class="btn btn-primary">➞</button>
-                        </div>
-                    </form>
-                </div>
+                <form action="" class="chat-form form-inline">
+                    <div class="input-group">
+                        <input id="m" type="text" class="chat-form form-control" placeholder="Type a Message Here" >
+                        <button type="submit" id="chat-btn" class="btn btn-primary">➞</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
