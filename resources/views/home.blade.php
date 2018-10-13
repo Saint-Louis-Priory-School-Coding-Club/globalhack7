@@ -5,15 +5,17 @@
         <div class="row justify-content-center">
             <h4 class="home-margin-bottom">Jobs You Have Applied For:</h4>
             <div class="col-md-8">
-                <a href="#" class="home-card-link">
-                    <div class="card home-card">
-                        <div class="card-header">Job</div>
+                @foreach(Auth::user()->jobs as $job)
+                    <a href="#" class="home-card-link">
+                        <div class="card home-card">
+                            <div class="card-header">{{ $job->name }}</div>
 
-                        <div class="card-body">
-                            This is a job desc
+                            <div class="card-body">
+                                {{ $job->desc }}
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>
