@@ -1,8 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use Auth;
+use App\Job;
+use App\Employer;
+use App\Experience;
+use App\User;
 
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
@@ -13,7 +19,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -25,12 +31,13 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function lang(Request $request) {
+        $translator = new \Dedicated\GoogleTranslate\Translator;
+        $view = view('postregistration')->render();
+        $result = $translator->setSourceLang('en')
+                             ->setTargetLang($request->code)
+                             ->translate($view);
+        return $result;
+    }
 }
-  public function lang($code) {
-    $translator = new \Dedicated\GoogleTranslate\Translator;
-    $view = view('iansection')->render();
-    $result = $translator->setSourceLang('en')
-                         ->setTargetLang($code)
-                         ->translate($view);
-      return $result;
-  }
