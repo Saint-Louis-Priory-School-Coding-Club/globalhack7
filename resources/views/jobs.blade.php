@@ -22,7 +22,6 @@
                 <h2>Contact Company</h2>
                 <form action="">
                     <div class="form-group">
-                        <label for="body">Your message</label>
                         <textarea class="form-control contact-form" name="body" cols="30" rows="5"></textarea>
                     </div>
                     <div class="form-group">
