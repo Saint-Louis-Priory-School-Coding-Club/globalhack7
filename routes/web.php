@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('jobs');
+    return view('home');
 })->middleware('guest');
 
 

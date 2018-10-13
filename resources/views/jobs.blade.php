@@ -39,15 +39,15 @@
             </div>
         </div>
 
-  <script>
-  function myMap() {
-    var mapProp= {
-      center:new google.maps.LatLng(40,-73),
-      zoom:5,
-    };
+    <script>
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(40,-73),
+            zoom:5,
+        };
     var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-  }
-  </script>
+    }
+    </script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASYmZ4iBjropstijIuXGZXuDVA7AbSEhI&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASYmZ4iBjropstijIuXGZXuDVA7AbSEhI&callback=myMap"></script>
 @endsection
