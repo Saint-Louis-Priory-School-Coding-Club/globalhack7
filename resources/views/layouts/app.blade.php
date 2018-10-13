@@ -40,6 +40,17 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                        <li class="nav-item">
+                          <div class="dropdown">
+                              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Languges
+                                <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#" id="ru">Russian</a></li>
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">Bosnian</a></li>
+                          </ul>
+                        </div>
+                        </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>

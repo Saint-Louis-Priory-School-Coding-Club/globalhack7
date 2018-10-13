@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class translate extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,14 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+      $translator = new \Dedicated\GoogleTranslate\Translator;
+      $view = view('iansection')->render();
+      $result = $translator->setSourceLang('fr')
+                           ->setTargetLang('en')
+                           ->translate($view);
+        return $result;
     }
 }
-  public function lang($code) {
-    $translator = new \Dedicated\GoogleTranslate\Translator;
-    $view = view('iansection')->render();
-    $result = $translator->setSourceLang('en')
-                         ->setTargetLang($code)
-                         ->translate($view);
-      return $result;
-  }

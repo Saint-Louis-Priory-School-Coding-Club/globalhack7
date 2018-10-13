@@ -4,7 +4,7 @@
     <div >
         <div class="dropdown">
             <div class="text-center">
-                <button class="job-select btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="text-center btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Job
                 </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -15,7 +15,7 @@
             <div class="card_margin card" class="McdonaldsManchesterCook">
                 <div class="jobDescription card-body">
                     <h2 class="card-title">Cook needed for the McDonald's on Manchester Rd.</h2></li>
-                <p class="card-description">The cook will be paid 9.00$ an hour. Email the employer for more information and to get an interview.</p></li>
+                <p class="card-description">The cook will be paid $9.00 an hour. Email the employer for more information and to get an interview.</p></li>
             <hr>
 
             <div class="emailEmployer" style="margin:auto">
@@ -39,4 +39,17 @@
                 </div>
             </div>
                 </div>
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+
+  <script>
+  function myMap() {
+  var mapProp= {
+      center:new google.maps.LatLng(51.508742,-0.120850),
+      zoom:5,
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k&callback=myMap"></script>
             @endsection
