@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
+    <div >
         <div class="dropdown">
-            <div class="text-center margin-bottom-25px">
+            <div class="text-center">
                 <button class="text-center btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Job
                 </button>
@@ -22,6 +22,7 @@
                 <h2>Contact Company</h2>
                 <form action="">
                     <div class="form-group">
+                        <label for="body">Your message</label>
                         <textarea class="form-control contact-form" name="body" cols="30" rows="5"></textarea>
                     </div>
                     <div class="form-group">
