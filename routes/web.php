@@ -11,9 +11,10 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('iansection');
-});
+    return view('welcome');
+})->middleware('guest');
 
 Auth::routes();
 
