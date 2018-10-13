@@ -33,11 +33,13 @@
             <div class="jobAddress">
                 <h3>Address</h3>
                 <p>1831 Manchester Rd. 63017, Manchester MO, USA</p>
+                $var = "https://www.google.com/maps/embed/v1/place?q=" + address + "&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k"
                 <div class="googleMaps">
                         <iframe width="100%" height="450" frameborder="0" style="border:0"
-                        src="https://www.google.com/maps/embed/v1/place?q=540+Mason+Road,+MO,+United+States&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k"></iframe>
+                        src=$var></iframe>
                 </div>
             </div>
         </div>
 
     @endsection
+//https://www.google.com/maps/embed/v1/place?q=540+Mason+Road,+MO,+United+States&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k
