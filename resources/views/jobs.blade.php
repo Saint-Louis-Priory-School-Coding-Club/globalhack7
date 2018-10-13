@@ -32,6 +32,7 @@
                     <div class="jobAddress">
                         <h3>Address</h3>
                         <p>{{$job->location}}</p>
+                        {{str_replace(' ', '+', $job->location)}}
                         <div class="googleMaps">
                             <div id="googleMap" class="google-map"></div>
                         </div>
