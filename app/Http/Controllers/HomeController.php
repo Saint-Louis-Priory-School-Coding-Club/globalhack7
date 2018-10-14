@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->lang) {
+        if (Auth::user()->bday) {
             return view('home');
         }
 

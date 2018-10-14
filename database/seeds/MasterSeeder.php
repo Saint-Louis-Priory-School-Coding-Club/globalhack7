@@ -99,7 +99,7 @@ class MasterSeeder extends Seeder
             determined after interviews.',
             'experience_id' => 2,
             'employer_id' => 4,
-            'location' => '911 Washington Ave #828, St. Louis, MO 63101'
+            'location' => '911 Washington Ave #828, Saint Louis, MO 63101'
         ]);
         
         DB::table('jobs')->insert([

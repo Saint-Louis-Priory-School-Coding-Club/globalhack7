@@ -31,7 +31,7 @@ if ($('#chat').length) {
         if ($('#m').val()) {
             socket.emit('chat message', $('#m').val());
             $('#messages').append($('<br>'));
-            $('#messages').append($('<div style="float:right" class="text_message_to bg-primary">').text($('#m').val()));
+            $('#messages').append($('<div style="float:right; margin-bottom: 5px;" class="text_message_to bg-primary">').text($('#m').val()));
             $('#messages').append($('<br>'));
             $('#m').val('');
         }

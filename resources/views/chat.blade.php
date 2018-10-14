@@ -13,9 +13,9 @@
                 {{--<p class="text_message_to">Hello Alex</p>--}}
 
 
-                <form action="" class="chat-form form-inline">
+                <form action="" id="chat-form" class="chat-form form-inline">
                     <div class="input-group">
-                        <input id="m" type="text" class="chat-form form-control" placeholder="Type a Message Here" >
+                        <input id="m" type="text" class="chat-form form-control" placeholder="Type a Message Here" autocomplete="off">
                         <button type="submit" id="chat-btn" class="btn btn-primary">➞</button>
                     </div>
                 </form>
