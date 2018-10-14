@@ -34,20 +34,10 @@
                         <p>{{$job->location}}</p>
                         {{str_replace(' ', '+', $job->location)}}
                         <div class="googleMaps">
-                            <div id="googleMap" class="google-map"></div>
+                            <iframe width="100%" height="450" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?q={{$job->location}}&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k"></iframe>
                         </div>
                     </div>
                 </div>
 
-                <script>
-                    function myMap() {
-                        var mapProp= {
-                            center:new google.maps.LatLng(40,-73),
-                            zoom:5,
-                        };
-                        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-                    }
-                </script>
-
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASYmZ4iBjropstijIuXGZXuDVA7AbSEhI&callback=myMap"></script>
             @endsection
