@@ -13,7 +13,11 @@
 
 
 Route::get('/', function () {
+<<<<<<< HEAD
     return view('welcome');
+=======
+    return view('jobs');
+>>>>>>> bf3e0593a6443f1ccac9509a0e519affb19308ab
 })->middleware('guest');
 
 

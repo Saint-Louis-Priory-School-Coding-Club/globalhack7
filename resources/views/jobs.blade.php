@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
+    <div >
         <div class="dropdown">
-            <div class="text-center margin-bottom-25px">
+            <div class="text-center">
                 <button class="text-center btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Job
                 </button>
@@ -22,6 +22,7 @@
                 <h2>Contact Company</h2>
                 <form action="">
                     <div class="form-group">
+                        <label for="body">Your message</label>
                         <textarea class="form-control contact-form" name="body" cols="30" rows="5"></textarea>
                     </div>
                     <div class="form-group">
@@ -32,22 +33,14 @@
             <hr>
             <div class="jobAddress">
                 <h3>Address</h3>
-                <p>1831 Manchester Rd. 63017, Manchester MO, USA</p>
+                <p>{{$job->location}}</p>
+                {{str_replace(' ', '+', $job->location)}}
                 <div class="googleMaps">
-                    <div id="googleMap" class="google-map"></div>
+                        <iframe width="100%" height="450" frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?q={{$job->location}}&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k"></iframe>
                 </div>
             </div>
         </div>
 
-    <script>
-    function myMap() {
-        var mapProp= {
-            center:new google.maps.LatLng(40,-73),
-            zoom:5,
-        };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASYmZ4iBjropstijIuXGZXuDVA7AbSEhI&callback=myMap"></script>
-@endsection
+    @endsection
+//https://www.google.com/maps/embed/v1/place?q=540+Mason+Road,+MO,+United+States&key=AIzaSyDZvv1cwFNNWACfgJhZLCFu72OdAoSTF2k

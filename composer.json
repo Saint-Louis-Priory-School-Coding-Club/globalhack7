@@ -60,3 +60,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true
 }
+"require": {
+      "farhanwazir/laravelgooglemaps": "^2.3"
+  }
